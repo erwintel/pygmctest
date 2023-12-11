@@ -31,3 +31,7 @@ def build(ctx):
 def docs(ctx):
     # Run in ./docs
     ctx.run("make html")
+
+@task
+def ruffix(ctx):
+    ctx.run("ruff check --fix .")
